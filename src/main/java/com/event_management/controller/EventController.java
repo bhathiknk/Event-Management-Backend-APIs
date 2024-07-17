@@ -33,4 +33,13 @@ public class EventController {
         }
         return new ResponseEntity<>(events, HttpStatus.OK);
     }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<Event>> getAllEvents() {
+        List<Event> events = eventService.getAllEvents();
+        if (events.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(events, HttpStatus.OK);
+    }
 }

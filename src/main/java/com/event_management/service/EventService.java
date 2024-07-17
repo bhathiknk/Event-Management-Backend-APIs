@@ -35,4 +35,8 @@ public class EventService {
     public List<Event> getEventsByAdminId(Long adminId) {
         return eventRepository.findByAdminId(adminId);
     }
+
+    public List<Event> getAllEvents() {
+        return eventRepository.findAll();
+    }
 }
