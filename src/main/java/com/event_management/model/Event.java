@@ -10,7 +10,7 @@ import java.time.LocalDate;
 public class Event {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long eventId;
+    private Long id;
 
     @Column(name = "event_name")
     private String eventName;
@@ -31,11 +31,11 @@ public class Event {
     // Getters and Setters
 
     public Long getEventId() {
-        return eventId;
+        return id;
     }
 
     public void setEventId(Long eventId) {
-        this.eventId = eventId;
+        this.id = eventId;
     }
 
     public String getEventName() {
